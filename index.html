@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>選修公民與社會 II：第 04 課 釋憲制度與人權保障</title>
+    <title>選修公民與社會 II：第 05 課 行政行為與法律救濟</title>
     <style>
         :root {
             --primary-color: #2c3e50;
-            --secondary-color: #34495e;
-            --accent-color: #e74c3c;
-            --blue-color: #3498db;
+            --accent-color: #16a085;
+            --warning-color: #e67e22;
             --bg-color: #f4f7f6;
             --card-bg: #ffffff;
         }
@@ -26,14 +25,11 @@
             color: white;
             padding: 2rem 1rem;
             text-align: center;
-            border-radius: 12px 12px 0 0;
+            border-radius: 12px;
             max-width: 900px;
             margin: 0 auto 20px auto;
         }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
+        .container { max-width: 900px; margin: 0 auto; }
         .card {
             background: var(--card-bg);
             border-radius: 12px;
@@ -41,50 +37,26 @@
             padding: 25px;
             margin-bottom: 25px;
         }
-        h2 {
-            border-left: 5px solid var(--accent-color);
-            padding-left: 12px;
-            color: var(--primary-color);
-            margin-top: 0;
-        }
+        h2 { border-left: 5px solid var(--accent-color); padding-left: 12px; color: var(--primary-color); }
         
         /* 互動式列表樣式 */
-        .role-item {
-            border: 1px solid #ddd;
-            margin-bottom: 12px;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        .role-header { 
-            background: #ffffff;
-            padding: 15px 20px;
-            cursor: pointer;
-            display: flex; 
-            justify-content: space-between;
-            align-items: center;
-            font-weight: bold;
-            font-size: 1.1em;
+        .item-box { border: 1px solid #ddd; margin-bottom: 12px; border-radius: 8px; overflow: hidden; }
+        .item-header { 
+            background: #ffffff; padding: 15px 20px; cursor: pointer; display: flex; 
+            justify-content: space-between; align-items: center; font-weight: bold; font-size: 1.1em;
             transition: background 0.3s;
         }
-        .role-header:hover { background: #f9f9f9; }
-        .role-content { 
-            display: none;
-            padding: 20px;
-            background: #fafafa;
-            border-top: 1px solid #eee;
-            line-height: 1.7;
-            animation: fadeIn 0.4s ease;
-        }
-        .plus { color: var(--blue-color); font-size: 1.5em; transition: transform 0.3s; }
-        .active .plus { transform: rotate(45deg); color: var(--accent-color); }
+        .item-header:hover { background: #f9f9f9; }
+        .item-content { display: none; padding: 20px; background: #fafafa; border-top: 1px solid #eee; animation: fadeIn 0.4s ease; }
+        .plus { color: var(--accent-color); font-size: 1.5em; transition: transform 0.3s; }
+        .active .plus { transform: rotate(45deg); color: #c0392b; }
 
-        /* 內容標籤 */
         .highlight { color: #c0392b; font-weight: bold; }
         .case-tag { background: #e8f4fd; color: #2980b9; padding: 2px 8px; border-radius: 4px; font-size: 0.9em; margin-right: 5px; font-weight: bold; }
         
         table { width: 100%; border-collapse: collapse; margin-top: 15px; }
-        th, td { border: 1px solid #ddd; padding: 12px; text-align: center; }
-        th { background-color: #eee; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #eee; text-align: center; }
 
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     </style>
@@ -92,19 +64,108 @@
 <body>
 
 <header>
-    <h1>第 04 課 釋憲制度與人權保障</h1>
-    <p>引導學生理解憲法作為「權利保障書」的核心價值</p>
+    <h1>第 05 課 行政行為與法律救濟</h1>
+    <p>從反核驅離案看「依法行政」與人民的權利救濟</p>
 </header>
 
 <div class="container">
 
     <div class="card">
-        <h2>一、焦點案例：通姦罪除罪化</h2>
-        <p>從釋憲見解的變遷，看見人權保障的演進。</p>
-        <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-            <div style="flex: 1; min-width: 300px; background: #fef9f9; padding: 15px; border-radius: 8px; border: 1px solid #f9e2e2;">
-                <p><strong>釋字第 554 號 (舊)：</strong> 為了維護婚姻忠誠，國家得選擇以「刑罰」手段達到目的，合乎憲法。</p>
+        <h2>一、焦點事件：強制驅離與國家賠償</h2>
+        <p>2014年反核遊行佔據忠孝西路，警方強力驅離導致民眾受傷，引發法律爭議。</p>
+        <div class="item-box" id="case1">
+            <div class="item-header" onclick="toggleItem('case1')">
+                爭議點：警方的強制行為合法嗎？ <span class="plus">+</span>
             </div>
-            <div style="flex: 1; min-width: 300px; background: #f0f7ff; padding: 15px; border-radius: 8px; border: 1px solid #d6e9ff;">
-                <p><strong>釋字第 791 號 (現)：</strong> 刑罰過度侵害「性自主權」與「隱私權」，且程序不公。宣告通姦罪違憲。</p>
+            <div class="item-content">
+                <p><span class="case-tag">法院判決</span> 2023年法院判決臺北市政府及警察局須賠償。理由是：雖然驅離是為了維護交通，但使用的強力水柱與手段造成民眾流血受傷，違反了<span class="highlight">「比例原則」</span>。</p>
+                <p><span class="case-tag">核心反思</span> 行政機關追求公益（交通順暢）時，不能過度犧牲人民的身體健康與安全。</p>
             </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>二、行政行為怎樣才算合法？</h2>
+        <p>行政行為必須符合法規，主要包含以下兩大原則：</p>
+
+        <div class="item-box" id="rule1">
+            <div class="item-header" onclick="toggleItem('rule1')">
+                1. 法律保留原則：有法才能動 <span class="plus">+</span>
+            </div>
+            <div class="item-content">
+                <p>行政機關限制人民權利（如罰款、拆房）時，必須有<span class="highlight">法律的明確授權</span>。沒有法律依據，行政機關不能隨意開罰。</p>
+            </div>
+        </div>
+
+        <div class="item-box" id="rule2">
+            <div class="item-header" onclick="toggleItem('rule2')">
+                2. 比例原則：手段與目的要平衡 <span class="plus">+</span>
+            </div>
+            <div class="item-content">
+                <p>目的是否正當？手段是否必要？損害是否過大？</p>
+                <ul>
+                    <li><strong>適當性：</strong> 手段能達成目的。</li>
+                    <li><strong>必要性：</strong> 選擇損害最小的手段（最小侵害）。</li>
+                    <li><strong>衡量性：</strong> 達成的公益要大於造成的損害。</li>
+                </ul>
+                <p><span class="case-tag">例</span> 為了抓違規停車，不能直接把車燒掉，因為不符比例原則。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>三、權利受損了？行政救濟三部曲</h2>
+        <p>當你不服行政處分（如收到不合理的交通罰單）時，可以這樣做：</p>
+        
+        <table>
+            <tr>
+                <th>階段</th>
+                <th>名稱</th>
+                <th>說明</th>
+            </tr>
+            <tr>
+                <td style="text-align:center;">1</td>
+                <td><strong>申訴 / 異議</strong></td>
+                <td>向原處分機關要求重新審核。</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;">2</td>
+                <td><strong class="highlight">訴願</strong></td>
+                <td>向原處分機關的「上級機關」提起，由訴願委員會審議。</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;">3</td>
+                <td><strong class="highlight">行政訴訟</strong></td>
+                <td>若不服訴願結果，向「行政法院」提告。</td>
+            </tr>
+        </table>
+
+        <div class="item-box" id="relief1" style="margin-top:20px;">
+            <div class="item-header" onclick="toggleItem('relief1')">
+                什麼是國家賠償？ <span class="plus">+</span>
+            </div>
+            <div class="item-content">
+                <p>當公務員「故意或過失」侵害人民權利，或公有設施（如橋斷了）造成人民損失時，人民可以請求<span class="highlight">國家賠償</span>。這也是反核驅離案中民眾採取的法律行動。</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function toggleItem(id) {
+        const item = document.getElementById(id);
+        const content = item.querySelector('.item-content');
+        
+        if (content.style.display === "block") {
+            content.style.display = "none";
+            item.classList.remove("active");
+        } else {
+            content.style.display = "block";
+            item.classList.add("active");
+        }
+    }
+</script>
+
+</body>
+</html>
