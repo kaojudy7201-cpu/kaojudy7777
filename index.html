@@ -3,152 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>選修公民與社會 II：第 04 課 釋憲制度與人權保障</title>
+    <title>高中公民課：釋憲制度與人權保障</title>
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #34495e;
-            --accent-color: #e74c3c;
-            --bg-color: #f4f7f6;
-            --card-bg: #ffffff;
+            --primary: #2c3e50;
+            --accent: #3498db;
+            --warning: #e67e22;
+            --bg: #f9f9f9;
         }
-        body {
-            font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: 0;
+        body { font-family: sans-serif; background: var(--bg); color: #333; line-height: 1.6; margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1 { color: var(--primary); border-bottom: 2px solid var(--primary); padding-bottom: 10px; text-align: center; }
+        .intro { background: #eef7fd; padding: 15px; border-left: 5px solid var(--accent); margin-bottom: 25px; border-radius: 4px; }
+        
+        /* 摺疊面板樣式 */
+        .accordion-item { border: 1px solid #ddd; margin-bottom: 10px; border-radius: 8px; overflow: hidden; }
+        .accordion-header { 
+            background: #fff; padding: 15px; cursor: pointer; font-weight: bold; 
+            display: flex; justify-content: space-between; align-items: center;
+            transition: background 0.3s;
         }
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 2rem 1rem;
-            text-align: center;
+        .accordion-header:hover { background: #f1f1f1; }
+        .accordion-content { 
+            display: none; padding: 20px; background: #fafafa; border-top: 1px solid #ddd;
+            animation: fadeIn 0.4s ease;
         }
-        .container {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 0 20px;
-        }
-        .card {
-            background: var(--card-bg);
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-        h2 {
-            border-left: 5px solid var(--accent-color);
-            padding-left: 10px;
-            color: var(--primary-color);
-        }
-        .comparison {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .comp-box {
-            flex: 1;
-            min-width: 280px;
-            padding: 15px;
-            border-radius: 5px;
-            background-color: #ecf0f1;
-        }
-        .comp-box h3 {
-            margin-top: 0;
-            color: #c0392b;
-        }
-        .interactive-section {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-        .interactive-header {
-            padding: 15px;
-            cursor: pointer;
-            background-color: #eee;
-            font-weight: bold;
-            display: flex;
-            justify-content: space-between;
-        }
-        .interactive-content {
-            padding: 15px;
-            display: none;
-        }
-        .highlight {
-            color: var(--accent-color);
-            font-weight: bold;
-        }
-        .footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9em;
-            color: #777;
-        }
+        .symbol { color: var(--accent); font-size: 1.5rem; transition: transform 0.3s; }
+        .active .symbol { transform: rotate(45deg); color: #e74c3c; }
+
+        /* 內容樣式 */
+        .case-box { background: white; border: 1px solid #eee; padding: 15px; margin-top: 10px; border-radius: 6px; }
+        .badge { background: var(--primary); color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; margin-right: 5px; }
+        .law-note { color: #c0392b; font-weight: bold; }
+        
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>第 04 課 釋憲制度與人權保障</h1>
-    <p>引導學生理解憲法作為「權利保障書」的核心價值</p>
-</header>
-
 <div class="container">
-    <div class="card">
-        <h2>一、焦點案例：通姦罪除罪化</h2>
-        <p>透過通姦罪的演進，觀察大法官如何隨時代變遷而調整憲法詮釋。</p>
-        <div class="comparison">
-            <div class="comp-box">
-                <h3>昔：釋字第 554 號</h3>
-                <ul>
-                    <li><strong>目的：</strong> 維護婚姻與家庭制度，預防通姦。</li>
-                    <li><strong>見解：</strong> 國家得制定規範約束夫妻互負忠誠義務，選擇以「刑罰」達成目的是立法機關的價值決定，合乎比例原則。</li>
-                </ul>
-            </div>
-            <div class="comp-box">
-                <h3>今：釋字第 791 號 (2020)</h3>
-                <ul>
-                    <li><strong>核心權利：</strong> 認同婚姻中個人<strong>性自主權</strong>與<strong>隱私權</strong>的重要性。</li>
-                    <li><strong>違憲原因：</strong> 刑罰過度干預權利，不符比例原則；刑事訴訟程序准許單獨對配偶撤告，違反<strong>平等權</strong>。</li>
-                    <li><strong>結果：</strong> 宣告違憲，通姦行為除罪化，改以民事救濟。</li>
-                </ul>
+    <h1>第 4 課：釋憲制度與人權保障</h1>
+    
+    <div class="intro">
+        本網頁整理自課本教材，重點在於理解大法官如何透過「憲法訴訟」來保障我們不受國家權力的侵害。
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header" onclick="toggle(this)">
+            1. 為何通姦罪會從「合憲」變「違憲」？ <span class="symbol">+</span>
+        </div>
+        <div class="accordion-content">
+            <p>這代表了憲法解釋會隨著時代變遷而演進：</p>
+            <div class="case-box">
+                <p><strong>● 釋字第 554 號 (舊見解)：</strong> 強調「維護婚姻與家庭制度」是重要公益，為了預防通姦，國家可以用刑罰手段來處罰。</p>
+                <hr>
+                <p><strong>● 釋字第 791 號 (新見解)：</strong> 
+                    <br>1. <span class="law-note">性自主權：</span> 個人與誰發生性行為屬於人格權的一部分。
+                    <br>2. <span class="law-note">比例原則：</span> 婚姻關係的維繫應靠感情而非刑法，動用刑法過度侵害自由。
+                    <br>3. <span class="law-note">平等權：</span> 舊制度允許只對配偶撤告而告小三，對第三人不公平。
+                </p>
             </div>
         </div>
     </div>
 
-    <div class="card">
-        <h2>二、為什麼我們需要憲法？</h2>
-        <p>憲法在民主國家中扮演的三大關鍵角色：</p>
-        <div class="interactive-section">
-            <div class="interactive-header" onclick="toggleContent('role1')">1. 維護憲政秩序 <span>+</span></div>
-            <div id="role1" class="interactive-content">
-                憲法位階最高。若無視憲法精神，會導致權力失序。<br>
-                <em>範例：</em> 戒嚴時期凍結憲法限制連任之規定，損害人民參政權。
-            </div>
+    <div class="accordion-item">
+        <div class="accordion-header" onclick="toggle(this)">
+            2. 憲法保障人權的三大核心功能 <span class="symbol">+</span>
         </div>
-        <div class="interactive-section">
-            <div class="interactive-header" onclick="toggleContent('role2')">2. 限制國家權力 <span>+</span></div>
-            <div id="role2" class="interactive-content">
-                防止公權力濫權，行政權應受到立法制衡並依法行政。<br>
-                <em>範例：</em> 過去《違警罰法》賦予警察過大權力（如拘留），即是違憲擴權的展現。
-            </div>
-        </div>
-        <div class="interactive-section">
-            <div class="interactive-header" onclick="toggleContent('role3')">3. 保護人民基本權利 <span>+</span></div>
-            <div id="role3" class="interactive-content">
-                憲法保障自由權，當權利受損時，應有國家賠償等機制救濟。<br>
-                <em>範例：</em> 1981年後施行的《國家賠償法》讓人民能就行政侵害請求賠償。
-            </div>
+        <div class="accordion-content">
+            <ul>
+                <li><strong>維護憲政秩序：</strong> 確立國家的遊戲規則。例如：總統任期、權力分立。</li>
+                <li><strong>限制國家權力：</strong> 確保政府不會變成「大怪獸」。透過法律保留原則，規定政府限制人民權利必須有法律依據。</li>
+                <li><strong>保障基本權利：</strong> 這是憲法最重要的功能。當你的自由（言論、集會、人身自由）被侵害時，憲法是你最後的防線。</li>
+            </ul>
         </div>
     </div>
 
-    <div class="card">
-        <h2>三、從「會議制」轉型為「憲法法庭」</h2>
-        <p>2022年1月起，《憲法訴訟法》施行，制度產生重大變革：</p>
-        <table style="width:100%; border-collapse: collapse; margin-top:10px;">
-            <tr style="background-color: #eee;">
-                <th style="padding:10px; border:1px solid #ddd;">特徵</th>
-                <th style="padding:10px; border:1px solid #ddd
+    <div class="accordion-item">
+        <div class="accordion-header" onclick="toggle(this)">
+            3. 「憲法法庭」的新制度：有什麼不一樣？ <span class="symbol">+</span>
+        </div>
+        <div class="accordion-content">
+            <p>2022 年 1 月起，我國從「大法官會議」轉型為「
