@@ -3,85 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>高中公民課：釋憲制度與人權保障</title>
+    <title>互動學習：憲法的核心功能</title>
     <style>
         :root {
-            --primary: #2c3e50;
-            --accent: #3498db;
-            --warning: #e67e22;
-            --bg: #f9f9f9;
+            --primary-dark: #1a252f;
+            --accent-blue: #3498db;
+            --highlight-gold: #f1c40f;
+            --text-gray: #555;
+            --bg-light: #f8f9fa;
         }
-        body { font-family: sans-serif; background: var(--bg); color: #333; line-height: 1.6; margin: 0; padding: 20px; }
-        .container { max-width: 800px; margin: auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        h1 { color: var(--primary); border-bottom: 2px solid var(--primary); padding-bottom: 10px; text-align: center; }
-        .intro { background: #eef7fd; padding: 15px; border-left: 5px solid var(--accent); margin-bottom: 25px; border-radius: 4px; }
+        body { font-family: "PingFang TC", "Heiti TC", sans-serif; background: var(--bg-light); margin: 0; padding: 20px; color: #333; }
+        .container { max-width: 850px; margin: auto; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        h1 { text-align: center; color: var(--primary-dark); font-size: 2rem; margin-bottom: 30px; }
         
-        /* 摺疊面板樣式 */
-        .accordion-item { border: 1px solid #ddd; margin-bottom: 10px; border-radius: 8px; overflow: hidden; }
-        .accordion-header { 
-            background: #fff; padding: 15px; cursor: pointer; font-weight: bold; 
-            display: flex; justify-content: space-between; align-items: center;
-            transition: background 0.3s;
-        }
-        .accordion-header:hover { background: #f1f1f1; }
-        .accordion-content { 
-            display: none; padding: 20px; background: #fafafa; border-top: 1px solid #ddd;
-            animation: fadeIn 0.4s ease;
-        }
-        .symbol { color: var(--accent); font-size: 1.5rem; transition: transform 0.3s; }
-        .active .symbol { transform: rotate(45deg); color: #e74c3c; }
+        .feature-title { font-size: 1.2rem; font-weight: bold; color: var(--primary-dark); margin-bottom: 15px; border-left: 4px solid var(--accent-blue); padding-left: 10px; }
 
-        /* 內容樣式 */
-        .case-box { background: white; border: 1px solid #eee; padding: 15px; margin-top: 10px; border-radius: 6px; }
-        .badge { background: var(--primary); color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; margin-right: 5px; }
-        .law-note { color: #c0392b; font-weight: bold; }
+        /* 摺疊面板設計 */
+        .accordion-item { border: 1px solid #e0e0e0; margin-bottom: 15px; border-radius: 10px; transition: all 0.3s ease; }
+        .accordion-item:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
         
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .accordion-header { 
+            padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+            background: #fff; border-radius: 10px; font-size: 1.1rem; font-weight: 600;
+        }
+        .accordion-content { 
+            display: none; padding: 0 25px 25px 25px; background: #fff; border-top: 1px dashed #eee;
+            animation: slideDown 0.4s ease-out;
+        }
+        
+        /* 內部內容美化 */
+        .content-box { background: #fdfdfd; border: 1px solid #f1f1f1; padding: 15px; border-radius: 8px; margin-top: 10px; }
+        .key-concept { display: inline-block; background: #e8f4fd; color: #2980b9; padding: 2px 8px; border-radius: 4px; font-weight: bold; margin-bottom: 5px; }
+        .example-label { color: #e67e22; font-weight: bold; }
+        .plus-icon { font-size: 1.5rem; color: var(--accent-blue); transition: transform 0.3s; }
+        .active .plus-icon { transform: rotate(45deg); color: #e74c3c; }
+
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>第 4 課：釋憲制度與人權保障</h1>
-    
-    <div class="intro">
-        本網頁整理自課本教材，重點在於理解大法官如何透過「憲法訴訟」來保障我們不受國家權力的侵害。
-    </div>
+    <h1>憲法保障人權的三大核心功能</h1>
+    <p style="text-align: center; color: #777;">點擊下方各項功能查看詳細解析與課本案例</p>
 
-    <div class="accordion-item">
-        <div class="accordion-header" onclick="toggle(this)">
-            1. 為何通姦罪會從「合憲」變「違憲」？ <span class="symbol">+</span>
+    <div class="accordion-item" id="item1">
+        <div class="accordion-header" onclick="toggle(1)">
+            <span>1. 維護憲政秩序：確立國家根本運作規範</span>
+            <span class="plus-icon">+</span>
         </div>
-        <div class="accordion-content">
-            <p>這代表了憲法解釋會隨著時代變遷而演進：</p>
-            <div class="case-box">
-                <p><strong>● 釋字第 554 號 (舊見解)：</strong> 強調「維護婚姻與家庭制度」是重要公益，為了預防通姦，國家可以用刑罰手段來處罰。</p>
-                <hr>
-                <p><strong>● 釋字第 791 號 (新見解)：</strong> 
-                    <br>1. <span class="law-note">性自主權：</span> 個人與誰發生性行為屬於人格權的一部分。
-                    <br>2. <span class="law-note">比例原則：</span> 婚姻關係的維繫應靠感情而非刑法，動用刑法過度侵害自由。
-                    <br>3. <span class="law-note">平等權：</span> 舊制度允許只對配偶撤告而告小三，對第三人不公平。
-                </p>
+        <div id="content1" class="accordion-content">
+            <div class="content-box">
+                <p><span class="key-concept">核心精神</span> 憲法作為「國家的根本大法」，其主要任務是確立民主國家的運作遊戲規則，確保國家機關（如行政、立法、司法）各司其職，不產生混亂。</p>
+                <ul>
+                    <li><strong>權力分立：</strong> 防止任何一個權力過大（如釋字第 520 號核四停建案，強調立法與行政的權限制衡）。</li>
+                    <li><strong>政黨競爭：</strong> 規範政黨必須在憲法框架下競爭，不能破壞民主自由憲政秩序。</li>
+                    <li><strong>法律位階：</strong> 確保所有法律與命令都不能抵觸憲法（憲法優位性）。</li>
+                </ul>
+                <p><span class="example-label">課本案例：</span> 大法官曾針對「里長延選案」進行解釋，就是為了釐清中央與地方政府在憲法體制下的權限界限，維護制度的穩定。</p>
             </div>
         </div>
     </div>
 
-    <div class="accordion-item">
-        <div class="accordion-header" onclick="toggle(this)">
-            2. 憲法保障人權的三大核心功能 <span class="symbol">+</span>
+    <div class="accordion-item" id="item2">
+        <div class="accordion-header" onclick="toggle(2)">
+            <span>2. 限制國家權力：防止政府濫用公權力侵害人民</span>
+            <span class="plus-icon">+</span>
         </div>
-        <div class="accordion-content">
-            <ul>
-                <li><strong>維護憲政秩序：</strong> 確立國家的遊戲規則。例如：總統任期、權力分立。</li>
-                <li><strong>限制國家權力：</strong> 確保政府不會變成「大怪獸」。透過法律保留原則，規定政府限制人民權利必須有法律依據。</li>
-                <li><strong>保障基本權利：</strong> 這是憲法最重要的功能。當你的自由（言論、集會、人身自由）被侵害時，憲法是你最後的防線。</li>
-            </ul>
+        <div id="content2" class="accordion-content">
+            <div class="content-box">
+                <p><span class="key-concept">核心精神</span> 歷史證明，政府若擁有不受限的權力，往往會成為侵害人民最深的力量。因此，憲法是為了「套住政府的枷鎖」。</p>
+                <p><strong>關鍵法律原則：</strong></p>
+                <ul>
+                    <li><span class="law-note">法律保留原則：</span> 政府若要限制人民的自由（如罰款、關押），必須有「法律」明確授權，不能僅憑行政命令。</li>
+                    <li><span class="law-note">正當法律程序：</span> 國家行使職權時（如搜索、扣押），必須遵守公正、透明的程序，給予人民陳述意見的機會。</li>
+                </ul>
+                <p><span class="example-label">想一想：</span> 為什麼以前警察可以直接決定關人（違警罰法），現在卻必須由法官決定？這就是憲法在限制警察的權力。</p>
+            </div>
         </div>
     </div>
 
-    <div class="accordion-item">
-        <div class="accordion-header" onclick="toggle(this)">
-            3. 「憲法法庭」的新制度：有什麼不一樣？ <span class="symbol">+</span>
+    <div class="accordion-item" id="item3">
+        <div class="accordion-header" onclick="toggle(3)">
+            <span>3. 保障人民基本權利：保障個人自由與尊嚴</span>
+            <span class="plus-icon">+</span>
         </div>
-        <div class="accordion-content">
-            <p>2022 年 1 月起，我國從「大法官會議」轉型為「
+        <div id="content3" class="accordion-content">
+            <div class="content-box">
+                <p><span class="key-concept">核心精神</span> 這是憲法最重要的使命。憲法列舉了人民應享有的各種基本權，作為對抗公權力的「盾牌」。</p>
+                <p><strong>保障範圍包含：</strong></p>
+                <ul>
+                    <li><span class="law-note">自由權：</span> 如言論自由、宗教自由、秘密通訊自由（保障隱私）。</li>
+                    <li><span class="law-note">平等權：</span> 禁止因性別、宗教、種族等因素給予差別待遇（如通姦罪除罪化案例中提到的性別平等概念）。</li>
+                    <li><span class="law-note">受益權：</span> 人民有權請求國家提供教育、健保等社會福利，或在權利受損時請求「司法救濟」。</li>
+                </ul>
+                <p><span class="example-label">釋字 791 號：</span> 通姦除罪化的解釋，正是在保障人民的「性自主權」與「隱私權」，這就是憲法保障個人尊嚴的最佳示範。</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function toggle(num) {
+        const content = document.getElementById('content' + num);
+        const header = document.getElementById('item' + num);
+        
+        // 切換顯示
+        if (content.style.display === "block") {
+            content.style.display = "none";
+            header.classList.remove("active");
+        } else {
+            content.style.display = "block";
+            header.classList.add("active");
+        }
+    }
+</script>
+
+</body>
+</html>
