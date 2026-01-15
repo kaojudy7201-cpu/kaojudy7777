@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>選修公民與社會 II：第 04 課 釋憲制度與人權保障</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #e74c3c;
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+        }
+        body {
+            font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            border-left: 5px solid var(--accent-color);
+            padding-left: 10px;
+            color: var(--primary-color);
+        }
+        .comparison {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .comp-box {
+            flex: 1;
+            min-width: 280px;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #ecf0f1;
+        }
+        .comp-box h3 {
+            margin-top: 0;
+            color: #c0392b;
+        }
+        .interactive-section {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .interactive-header {
+            padding: 15px;
+            cursor: pointer;
+            background-color: #eee;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+        }
+        .interactive-content {
+            padding: 15px;
+            display: none;
+        }
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>第 04 課 釋憲制度與人權保障</h1>
+    <p>引導學生理解憲法作為「權利保障書」的核心價值</p>
+</header>
+
+<div class="container">
+    <div class="card">
+        <h2>一、焦點案例：通姦罪除罪化</h2>
+        <p>透過通姦罪的演進，觀察大法官如何隨時代變遷而調整憲法詮釋。</p>
+        <div class="comparison">
+            <div class="comp-box">
+                <h3>昔：釋字第 554 號</h3>
+                <ul>
+                    <li><strong>目的：</strong> 維護婚姻與家庭制度，預防通姦。</li>
+                    <li><strong>見解：</strong> 國家得制定規範約束夫妻互負忠誠義務，選擇以「刑罰」達成目的是立法機關的價值決定，合乎比例原則。</li>
+                </ul>
+            </div>
+            <div class="comp-box">
+                <h3>今：釋字第 791 號 (2020)</h3>
+                <ul>
+                    <li><strong>核心權利：</strong> 認同婚姻中個人<strong>性自主權</strong>與<strong>隱私權</strong>的重要性。</li>
+                    <li><strong>違憲原因：</strong> 刑罰過度干預權利，不符比例原則；刑事訴訟程序准許單獨對配偶撤告，違反<strong>平等權</strong>。</li>
+                    <li><strong>結果：</strong> 宣告違憲，通姦行為除罪化，改以民事救濟。</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>二、為什麼我們需要憲法？</h2>
+        <p>憲法在民主國家中扮演的三大關鍵角色：</p>
+        <div class="interactive-section">
+            <div class="interactive-header" onclick="toggleContent('role1')">1. 維護憲政秩序 <span>+</span></div>
+            <div id="role1" class="interactive-content">
+                憲法位階最高。若無視憲法精神，會導致權力失序。<br>
+                <em>範例：</em> 戒嚴時期凍結憲法限制連任之規定，損害人民參政權。
+            </div>
+        </div>
+        <div class="interactive-section">
+            <div class="interactive-header" onclick="toggleContent('role2')">2. 限制國家權力 <span>+</span></div>
+            <div id="role2" class="interactive-content">
+                防止公權力濫權，行政權應受到立法制衡並依法行政。<br>
+                <em>範例：</em> 過去《違警罰法》賦予警察過大權力（如拘留），即是違憲擴權的展現。
+            </div>
+        </div>
+        <div class="interactive-section">
+            <div class="interactive-header" onclick="toggleContent('role3')">3. 保護人民基本權利 <span>+</span></div>
+            <div id="role3" class="interactive-content">
+                憲法保障自由權，當權利受損時，應有國家賠償等機制救濟。<br>
+                <em>範例：</em> 1981年後施行的《國家賠償法》讓人民能就行政侵害請求賠償。
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>三、從「會議制」轉型為「憲法法庭」</h2>
+        <p>2022年1月起，《憲法訴訟法》施行，制度產生重大變革：</p>
+        <table style="width:100%; border-collapse: collapse; margin-top:10px;">
+            <tr style="background-color: #eee;">
+                <th style="padding:10px; border:1px solid #ddd;">特徵</th>
+                <th style="padding:10px; border:1px solid #ddd
